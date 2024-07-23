@@ -3,6 +3,11 @@ sudo apt update
 # Install updates
 sudo apt upgrade -y
 
+# Install programming languages
+sudo apt install -y golang          # Go is a simple, fast, and secure language for building systems.
+sudo apt install -y openjdk-17-jdk  # Java Development Kit
+sudo apt install -y openjdk-17-jre  # Java Runtime Engine
+
 # Install network and security tools
 sudo apt install -y curl          # Command-line tool for transferring data with URL syntax
 sudo apt install -y wget          # Retrieves files from the web
