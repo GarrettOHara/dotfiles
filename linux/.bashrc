@@ -92,6 +92,9 @@ alias ccat='pygmentize -g'
 # Install .deb packages
 alias install='sudo dpkg -i'
 
+# LazyGit
+alias lg='lazygit'
+
 ### EXPORTS ### 
 # You may want to put all your environment variable exports in a separate file
 # ~/.bash_exports, instead of adding them here directly.
