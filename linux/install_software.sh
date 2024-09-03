@@ -21,9 +21,9 @@ sudo apt install -y hashcat       # Advanced password recovery utility
 sudo apt install -y hydra         # Password cracking tool
 
 # Install anonymity tools
-sudo apt install -y tor 				        # Anonymity and privacy online
+sudo apt install -y tor			# Anonymity and privacy online
 sudo apt install -y torbrowser-launcher # Tor anonymous browser
-sudo apt install -y proxychains 		    # Multiple proxy configuration
+sudo apt install -y proxychains 	# Multiple proxy configuration
 
 # Install productivity/administration tools
 sudo apt install -y vim 	# Highly configurable text editor
@@ -31,15 +31,21 @@ sudo apt install -y htop 	# Interactive process viewer and system monitor
 sudo apt install -y tree 	# Display directory tree
 sudo apt install -y tmux 	# Terminal multiplexer
 sudo apt install -y git		# Version Control System (VCS)
-sudo apt install -y cmake # Compilation support for C++
+sudo apt install -y cmake	# Compilation support for C++
 sudo apt install -y xsel 	# Install xsel
 
 # Install Language specific software compilation packages
-sudo apt install -y build-essential   # Informational list of build-essential packages
-sudo apt install -y g++               # GNU C++ compiler
-sudo apt install -y pip				        # Python package manager
-sudo apt install -y vim-nox 		      # vim-nox is a minimal vim installation and does not have a GUI
-sudo apt install -y python3-dev 	    # Header files and a static library for Python
+sudo apt install -y build-essential	# Informational list of build-essential packages
+sudo apt install -y g++			# GNU C++ compiler
+sudo apt install -y pip			# Python package manager
+sudo apt install -y vim-nox		# vim-nox is a minimal vim installation and does not have a GUI
+sudo apt install -y python3-dev		# Header files and a static library for Python
+
+# Neovim
+sudo apt install nodejs
+sudo apt install npm
+sudo apt install nodejs
+sudo apt install npm
 
 # Install LazyGit
 LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')

@@ -237,25 +237,25 @@ require("lazy").setup({
 		ft = { "markdown" },
 	},
 
-  {
-    "kdheepak/lazygit.nvim",
-    cmd = {
-      "LazyGit",
-      "LazyGitConfig",
-      "LazyGitCurrentFile",
-      "LazyGitFilter",
-      "LazyGitFilterCurrentFile",
-    },
-    -- optional for floating window border decoration
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-    },
-    -- setting the keybinding for LazyGit with 'keys' is recommended in
-    -- order to load the plugin when the command is run for the first time
-    keys = {
-      { "<leader>gg", "<cmd>LazyGit<cr>", desc = "LazyGit" }
-    }
-  },
+	{
+		"kdheepak/lazygit.nvim",
+		cmd = {
+			"LazyGit",
+			"LazyGitConfig",
+			"LazyGitCurrentFile",
+			"LazyGitFilter",
+			"LazyGitFilterCurrentFile",
+		},
+		-- optional for floating window border decoration
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+		},
+		-- setting the keybinding for LazyGit with 'keys' is recommended in
+		-- order to load the plugin when the command is run for the first time
+		keys = {
+			{ "<leader>gg", "<cmd>LazyGit<cr>", desc = "LazyGit" },
+		},
+	},
 
 	-- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
 	"tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
@@ -925,6 +925,21 @@ require("lazy").setup({
 	{
 		"nvim-neo-tree/neo-tree.nvim",
 		branch = "v3.x",
+		opts = {
+			filesystem = {
+				filtered_items = {
+					visible = true,
+					show_hidden_count = true,
+					hide_dotfiles = false,
+					hide_gitignored = true,
+					hide_by_name = {
+						".git",
+						".DS_Store",
+					},
+					never_show = {},
+				},
+			},
+		},
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 			"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
