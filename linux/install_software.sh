@@ -42,7 +42,8 @@ sudo apt install -y vim-nox		# vim-nox is a minimal vim installation and does no
 sudo apt install -y python3-dev		# Header files and a static library for Python
 
 # Neovim
-sudo apt install nodejs
+curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+sudo apt-get install -y nodejs
 sudo apt install npm
 sudo npm install --global yarn
 
