@@ -71,30 +71,6 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-
-# Networking
-alias vpn='sudo openvpn --config /home/garrett/Documents/OpenVPN/garrettsVPN.ovpn' 
-alias whatsmyip='curl ipinfo.io/ip; echo ""'
-
-# Document formatting
-alias folddoc='fold -w 80 -s $1 > foled.txt'
-
-# Copy/Paste
-alias pbcopy='xsel --clipboard'
-alias pbpaste='xsel --clipboard --output'
-
-# Syntax highlighting when printing code
-alias ccat='pygmentize -g'
-
-# Install .deb packages
-alias install='sudo dpkg -i'
-
-# LazyGit
-alias lg='lazygit'
-
 ### EXPORTS ### 
 # You may want to put all your environment variable exports in a separate file
 # ~/.bash_exports, instead of adding them here directly.
@@ -102,7 +78,6 @@ alias lg='lazygit'
 if [ -f ~/.bash_exports ]; then
     . ~/.bash_exports
 fi
-
 
 ### TERRAFORM ###
 complete -C /usr/bin/terraform terraform
