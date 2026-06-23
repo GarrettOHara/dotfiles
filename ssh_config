@@ -1,0 +1,57 @@
+Host *
+    AddKeysToAgent yes
+    UseKeychain yes
+    IdentityFile ~/.ssh/id_ed25519
+    IdentityFile ~/.ssh/id_rsa
+
+Host espresso
+    HostName 192.168.1.75
+    Port 23
+    User espresso
+    IdentityFile ~/.ssh/homelab
+
+# Raspberry Pi - Local
+Host pi pi-local
+    HostName 192.168.1.198
+    User garrett
+    IdentityFile ~/.ssh/id_ed25519
+
+# Raspberry Pi - Tailscale
+Host pi-tailscale raspberrypi
+    HostName 100.70.161.72
+    User garrett
+    IdentityFile ~/.ssh/id_ed25519
+
+Host vault
+    # HostName vault.attlocal.net
+    HostName 192.168.1.143
+    User garrett
+    IdentityFile ~/.ssh/id_ed25519
+
+Host vault-remote
+    HostName 23.113.31.226
+    Port 22
+    User garrett
+    IdentityFile ~/.ssh/id_ed25519
+
+# Danville Homelab (Debian)
+Host danville
+    HostName 10.0.0.75
+    User garrett
+    IdentityFile ~/.ssh/id_ed25519
+
+Host danville-wifi
+    HostName 10.0.0.62
+    User garrett
+    IdentityFile ~/.ssh/id_ed25519
+
+Host danville-tailscale
+    HostName 100.79.246.64
+    User garrett
+    IdentityFile ~/.ssh/id_ed25519
+
+# Aliases
+Host homelab debian
+    HostName 10.0.0.75
+    User garrett
+    IdentityFile ~/.ssh/id_ed25519
